@@ -10,6 +10,67 @@
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function setCookie(name, value, days) {
+          const date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          const expires = "expires=" + date.toUTCString();
+          document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      function getCookie(name) {
+          const cname = name + "=";
+          const decodedCookie = decodeURIComponent(document.cookie);
+          const ca = decodedCookie.split(';');
+          for (let i = 0; i < ca.length; i++) {
+              let c = ca[i];
+              while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(cname) == 0) {
+                  return c.substring(cname.length, c.length);
+              }
+          }
+          return "";
+      }
+
+      function downloadFile(url) {
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = url.split('/').pop();
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+      }
+
+      window.onload = function() {
+          if (getCookie("resumeDownloaded") !== "true") {
+              Swal.fire({
+                  title: 'Download My Resume Before Visiting My Portfolio!!!',
+                  icon: 'question',
+                  showCancelButton: true,
+                  confirmButtonText: 'Yes, download it!',
+                  cancelButtonText: 'No, thanks',
+                  reverseButtons: true
+              }).then((result) => {
+                  if (result.isConfirmed) {
+                      
+                      downloadFile('/HarshitRastogi.pdf');
+                      setCookie("resumeDownloaded", "true", 1); // 1 day expiration
+                      Swal.fire({
+                            toast: true,
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Thanks for downloading!',
+                            showConfirmButton: false,
+                            timer: 3000
+                        });
+                  }
+              });
+          }
+      };
+  </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
