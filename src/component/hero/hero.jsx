@@ -26,14 +26,14 @@ const textVariants = {
 
 const sliderVariants = {
   initial: {
-    x: 0,
+    x: 10,
   },
   animate: {
-    x: "-80%",
+    x: "-120%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 10,
+      duration: 5,
     },
   },
 };

@@ -1,88 +1,176 @@
-.services{
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-    height: 100%;
+@import "../src/app.scss";
 
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    margin-top: 0px;
+    padding-top: 0px ;
+  @include mobile {
+    z-index: 999;
+    overflow: hidden;
+    padding-top: -30px;
+  }
+
+  .textContainer {
+
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+      @include mobile {
+        margin-right: 10px;
+        font-size: 18px;
+        margin-left: 20px;
+        font-weight: 300;
+      }
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+        margin-top: -10px;
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 
-    .textContainer{
-        flex:1;
-        align-self: flex-end;
-        display: flex;
+    @include mobile {
+      width: 100%;
+      margin-top: -10px;
+      
+        h1{
+          font-size: 30px !important;
+        }
+      
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        font-weight: 900;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+
+    @include mobile {
+        margin-top: -70px !important;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .box {
+      padding: 50px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include mobile {
+        border: 0.5px solid gray;
+        border-radius: 10px;
         align-items: center;
         gap: 20px;
+        padding: 20px;
+        min-height: 150px;
+      }
 
-        p{
-            font-weight: 200;
-            font-size: 20px;
-            color: gray;
-            text-align: right;
+      p {
+        @include mobile {
+          display: none;
         }
-        hr{
-            width: 500px;
-            border: none;
-            border-top: 0.5px solid gray;
+      }
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 80%;
+          padding: 5px;
         }
+      }
     }
-
-    .titleContainer{
-        flex: 2;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-
-        .title{
-            display: flex;
-            align-items: center;
-            gap: 50px;
-
-            img{
-                width: 300px;
-                height: 100px;
-                border-radius: 50px;
-                object-fit: cover;
-            }
-
-            h1{
-                font-size: 96px;
-                font-weight: 100;
-            }
-
-            button{
-                width: 300px;
-                height: 100px;
-                border-radius: 50px;
-                background-color: orange;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-            }
-        }
-    }
-
-    .listContainer{
-        flex:2;
-        display: flex;
-        max-width: 1366px;
-        margin: auto;
-        
-        .box{
-            padding: 50px;
-            border: 0.5px solid gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            button{
-                padding: 10px;
-                background-color: orange;
-                border: none;
-                cursor: pointer;
-            }
-        }
-    }
-
+  }
 }
