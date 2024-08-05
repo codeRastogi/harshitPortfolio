@@ -15,10 +15,10 @@ const NavBar = () => {
             transition={{duration : 0.5}}
             >WebDev Harshit</motion.span>
             <div className="social">
-                <a href="#"><img src="/facebook.png" alt="" /></a>
-                <a href="#"><img src="/instagram.png" alt="" /></a>
-                <a href="#"><img src="/youtube.png" alt="" /></a>
-                <a href="#"><img src="/dribbble.png" alt="" /></a>
+                <a href="https://github.com/codeRastogi"  target="_blank"><img src="/github.svg" alt="" /></a>
+                <a href="https://www.linkedin.com/in/harshitrastogi01/" target="_blank"><img src="/linkdin.png" alt="" /></a>
+                <a href="https://linktr.ee/harshit002" target="_blank"><img src="/linktree.png" alt="" /></a>
+                <a href="https://www.instagram.com/harshit__002/" target="_blank"><img src="/instagram.png" alt="" /></a>
             </div>
         </div>
 

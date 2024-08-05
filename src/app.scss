@@ -15,6 +15,7 @@ html {
 body {
   background-color: #0c0c1d;
   color: lightgray;
+  
 }
 
 a {
@@ -42,5 +43,17 @@ section {
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }

@@ -26,15 +26,20 @@
 
     .social {
       display: flex;
-      gap: 20px;
+      gap: 25px;
 
       img {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
+        @include mobile{
+          width: 20px;
+          height: 20px;
+        }
       }
 
       @include mobile{
         margin-top: -38px;
+        gap: 20px;
       }
     }
   }

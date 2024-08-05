@@ -6,6 +6,8 @@ import Hero from "./component/hero/hero";
 import NavBar from "./component/navbar/NavBar";
 import Parallax from "./component/parallax/parallax";
 import PortFolio from "./component/portfolio/PortFolio";
+import ScrollToTop from "react-scroll-to-top";
+
 
 const App = () => {
   return <div>
@@ -28,7 +30,7 @@ const App = () => {
   }}
 />
 
-    <section id="Homepage">
+    <section id="About">
       <NavBar/>
       <Hero/>
     </section>
@@ -39,6 +41,19 @@ const App = () => {
     <section id="Portfolio"><Parallax type= "portfolio"/></section>
     <PortFolio/>
     <section id="Contact"><Contact/></section>
+    <ScrollToTop
+      smooth
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        animation: 'bounce 2s infinite',
+        backgroundColor: 'rgb(54,49,98)',
+        zIndex: '999'
+      }}
+      viewBox="0 0 24 24"
+      svgPath="m18 15-6-6-6 6"
+    />
   </div>;
 };
 

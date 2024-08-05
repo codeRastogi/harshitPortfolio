@@ -70,11 +70,12 @@
       z-index: -1;
     
       @include mobile {
+        bottom: 10px;
         svg{
             width: 250px;
             transform: translateX(-5%);
         }
-        bottom: 10px;
+        
       }
     }
 
