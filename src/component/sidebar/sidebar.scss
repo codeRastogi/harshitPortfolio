@@ -4,9 +4,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  // background-color: white;
   color: black;
-
+  background: rgb(169,215,222);
+  background: linear-gradient(180deg, rgba(169,215,222,1) 0%, rgb(11, 11, 59) 100%, rgba(0,212,255,1) 100%);
 
   
   .bg {
@@ -16,8 +17,7 @@
     left: 0;
     bottom: 0;
     width: 400px;
-    background: rgb(169,215,222);
-    background: linear-gradient(180deg, rgba(169,215,222,1) 0%, rgb(11, 11, 59) 100%, rgba(0,212,255,1) 100%);
+    
     
     @include mobile{
       background: transparent;

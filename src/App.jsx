@@ -1,3 +1,4 @@
+import AnimatedCursor from "react-animated-cursor";
 import { Services } from "../services/Services";
 import "./app.scss";
 import Contact from "./component/contact/Contact";
@@ -8,6 +9,25 @@ import PortFolio from "./component/portfolio/PortFolio";
 
 const App = () => {
   return <div>
+    
+    <AnimatedCursor
+  
+  innerSize={8}
+  outerSize={40}
+  innerScale={1}
+  outerScale={2}
+  outerAlpha={0}
+  hasBlendMode={true}
+  innerStyle={{
+    backgroundColor: '#fff',
+    zIndex:1000
+  }}
+  outerStyle={{
+    border: '2px solid #fff',
+    zIndex:1000
+  }}
+/>
+
     <section id="Homepage">
       <NavBar/>
       <Hero/>
