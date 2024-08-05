@@ -7,11 +7,13 @@ import NavBar from "./component/navbar/NavBar";
 import Parallax from "./component/parallax/parallax";
 import PortFolio from "./component/portfolio/PortFolio";
 import ScrollToTop from "react-scroll-to-top";
+import { isMobile } from 'react-device-detect';
 
 
 const App = () => {
   return <div>
     
+   {!isMobile &&
     <AnimatedCursor
   
   innerSize={8}
@@ -29,6 +31,7 @@ const App = () => {
     zIndex:1000
   }}
 />
+}
 
     <section id="About">
       <NavBar/>
