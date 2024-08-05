@@ -13,25 +13,27 @@ import { isMobile } from 'react-device-detect';
 const App = () => {
   return <div>
     
-   {!isMobile &&
-    <AnimatedCursor
-  
-  innerSize={8}
-  outerSize={40}
-  innerScale={1}
-  outerScale={2}
-  outerAlpha={0}
-  hasBlendMode={true}
-  innerStyle={{
-    backgroundColor: '#fff',
-    zIndex:1000
-  }}
-  outerStyle={{
-    border: '2px solid #fff',
-    zIndex:1000
-  }}
-/>
-}
+    {!isMobile && (
+  <AnimatedCursor
+    innerSize={8}
+    outerSize={40}
+    innerScale={1}
+    outerScale={2}
+    outerAlpha={0}
+    hasBlendMode={true}
+    innerStyle={{
+      backgroundColor: 'rgb(227, 203, 151)',
+      zIndex: 10000,  // Increased zIndex value
+      position: 'fixed',
+    }}
+    outerStyle={{
+      border: '2px solid rgb(227, 203, 151)',
+      zIndex: 10000,  // Increased zIndex value
+      position: 'fixed',
+    }}
+  />
+)}
+
 
     <section id="About">
       <NavBar/>
