@@ -19,6 +19,24 @@ const variants = {
     }
   }
 };
+const keySkillsForYourBusiness = [
+  {
+    title: "MERN Developer",
+    description: "Expertise in MongoDB, Express.js, React, and Node.js, developing and deploying full-stack applications."
+  },
+  {
+    title: "Frontend Development",
+    description: "Proficient in HTML, CSS, JavaScript, with experience in Tailwind CSS, ReactJS, and NextJS, creating responsive and user-friendly interfaces."
+  },
+  {
+    title: "Backend Development",
+    description: "Strong skills in Node.js, MySQL, MongoDB, building RESTful APIs, and implementing server-side logic with Prisma."
+  },
+  {
+    title: "Problem-Solving & Algorithm Design",
+    description: "Certified in Data Structures and Algorithms, solving complex problems, optimizing code, and succeeding in LeetCode challenges and hackathon projects."
+  }
+];
 
 export const Services = () => {
   const ref = useRef();
@@ -71,16 +89,15 @@ export const Services = () => {
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
-        {['Branding', 'Branding', 'Branding', 'Branding'].map((title, index) => (
+        {keySkillsForYourBusiness.map((skill, index) => (
           <motion.div
             className="box"
             key={index}
             whileHover={{ background: "lightgray", color: "black" }}
           >
-            <h2>{title}</h2>
+            <h2>{skill.title}</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus molestias unde at veniam, id eaque quis iure.
+              {skill.description}
             </p>
             <button>Go</button>
           </motion.div>

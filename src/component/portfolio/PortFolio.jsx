@@ -5,29 +5,34 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "HackwithIndia",
+    img: "/hackwithindia.png",
+    desc: "A branding website for the HackwithIndia hackathon, featuring integrated registration links and a backend for the query form.",
+    link: "https://nextapphackwithindia.vercel.app/"
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "React Shopping Cart",
+    img: "/shopping.png",
+    desc: "A frontend-only interactive shopping cart application built with React, featuring product listings and cart functionality.",
+    link: "https://shopingcart-rho.vercel.app/"
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Ed-Tech React App",
+    img: "/edtech.png",
+    desc: "A frontend-only educational platform designed to facilitate online learning and course management using React.",
+    link: "https://studynotion-eta.vercel.app/"
   },
   {
     id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
+    title: "Animated Portfolio",
+    img: "/portfolioimg.png",
+    desc: "A visually appealing and interactive portfolio showcasing personal projects, skills, and achievements with smooth animations.",
+    link: "https://harshit-portfolio-ashy.vercel.app/"
+  }
 ];
+
 
 const Single = ({ item }) => {
   const ref = useRef();
@@ -48,7 +53,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <button><a href={item.link} target="_blank">See Demo</a></button>
           </motion.div>
         </div>
       </div>

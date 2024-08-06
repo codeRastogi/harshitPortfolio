@@ -8,6 +8,7 @@
   justify-content: space-between;
     margin-top: 0px;
     padding-top: 0px ;
+    padding-bottom: 50px;
   @include mobile {
     z-index: 999;
     overflow: hidden;
@@ -135,11 +136,13 @@
     }
 
     .box {
-      padding: 50px;
+      padding: 30px;
+      width: 20vw;
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin-top: 20px;
 
       @include mobile {
         border: 0.5px solid gray;
@@ -148,9 +151,15 @@
         gap: 20px;
         padding: 20px;
         min-height: 150px;
+        width: 38vw;
+        h2{
+          font-size: small;
+          
+        }
       }
 
       p {
+        font-size: 15px;
         @include mobile {
           display: none;
         }
