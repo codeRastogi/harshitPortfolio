@@ -30,6 +30,20 @@ const items = [
     img: "/portfolioimg.png",
     desc: "A visually appealing and interactive portfolio showcasing personal projects, skills, and achievements with smooth animations.",
     link: "https://harshit-portfolio-ashy.vercel.app/"
+  },
+  {
+    id: 5,
+    title: "Tour Scheduling App",
+    img: "/tour.png",
+    desc: "This is a front-end tour scheduling app built with React and Tailwind CSS, designed to offer a seamless and stylish user experience.",
+    link: "https://tourapp-sigma.vercel.app/"
+  },
+  {
+    id: 6,
+    title: "Tic-Tac-Toe Game",
+    img: "/tictactoe.png",
+    desc: "A Tic-Tac-Toe game with HTML, CSS, and JavaScript, showcasing basic front-end development and game logic skills.",
+    link: "https://tourapp-sigma.vercel.app/"
   }
 ];
 
