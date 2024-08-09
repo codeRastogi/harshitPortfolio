@@ -22,19 +22,23 @@ const variants = {
 const keySkillsForYourBusiness = [
   {
     title: "MERN Developer",
-    description: "Expertise in MongoDB, Express.js, React, and Node.js, developing and deploying full-stack applications."
+    description: "Expertise in MongoDB, Express.js, React, and Node.js, developing and deploying full-stack applications.",
+    link : "#Portfolio"
   },
   {
     title: "Frontend Development",
-    description: "Proficient in HTML, CSS, JavaScript, with experience in Tailwind CSS, ReactJS, and NextJS, creating responsive and user-friendly interfaces."
+    description: "Proficient in HTML, CSS, JavaScript, with experience in Tailwind CSS, ReactJS, and NextJS, creating responsive and user-friendly interfaces.",
+    link : "#Portfolio"
   },
   {
     title: "Backend Development",
-    description: "Strong skills in Node.js, MySQL, MongoDB, building RESTful APIs, and implementing server-side logic with Prisma."
+    description: "Strong skills in Node.js, MySQL, MongoDB, building RESTful APIs, and implementing server-side logic with Prisma.",
+    link : "#Portfolio"
   },
   {
-    title: "Problem-Solving & Algorithm Design",
-    description: "Certified in Data Structures and Algorithms, solving complex problems, optimizing code, and succeeding in LeetCode challenges and hackathon projects."
+    title: "Algorithm Design",
+    description: "Certified in Data Structures and Algorithms, solving complex problems, optimizing code, and succeeding in LeetCode challenges and hackathon projects.",
+    link : "https://leetcode.com/u/HarshitRastogi002/"
   }
 ];
 
@@ -99,7 +103,7 @@ export const Services = () => {
             <p>
               {skill.description}
             </p>
-            <button>Go</button>
+            <button><a href={skill.link}>Go</a></button>
           </motion.div>
         ))}
       </motion.div>
