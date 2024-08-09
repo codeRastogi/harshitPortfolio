@@ -3,6 +3,7 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { BeatLoader } from "react-spinners";
 
 const variants = {
   initial: {
@@ -24,12 +25,13 @@ const Contact = () => {
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setLoading(true);
     emailjs
       .sendForm(
         "service_fuwjoih",
@@ -42,10 +44,12 @@ const Contact = () => {
           setSuccess(true);
           toast.success("Done! Your message has been delivered.");
           formRef.current.reset();
+          setLoading(false);
         },
         (error) => {
           setError(true);
           toast.error("Yikes! Message not sent. Please try again.");
+          setLoading(false);
         }
       );
   };
@@ -113,7 +117,9 @@ const Contact = () => {
           <input type="text" required placeholder="Your name, please" name="name"/>
           <input type="email" required placeholder="Best email to contact you?" name="email"/>
           <textarea rows={8} placeholder="Got a question or idea? Let's hear it!" name="message"/>
-          <button>Submit</button>
+          <button disabled={loading}>{
+            loading? <BeatLoader/> : "Submit"
+            }</button>
         </motion.form>
       </div>
     </motion.div>
