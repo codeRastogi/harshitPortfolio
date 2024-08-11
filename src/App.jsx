@@ -9,6 +9,10 @@ import PortFolio from "./component/portfolio/PortFolio";
 import ScrollToTop from "react-scroll-to-top";
 import { isMobile } from 'react-device-detect';
 
+import LocomotiveScroll from 'locomotive-scroll';
+
+const locomotiveScroll = new LocomotiveScroll();
+
 
 const App = () => {
   return <div>
