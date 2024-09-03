@@ -109,6 +109,10 @@
         @include mobile {
           padding: 10px;
         }
+        p{
+          font-weight: bolder;
+          font-size: large;
+        }
       }
     }
   }

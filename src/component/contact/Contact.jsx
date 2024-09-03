@@ -118,7 +118,7 @@ const Contact = () => {
           <input type="email" required placeholder="Best email to contact you?" name="email"/>
           <textarea rows={8} placeholder="Got a question or idea? Let's hear it!" name="message"/>
           <button disabled={loading}>{
-            loading? <BeatLoader/> : "Submit"
+            loading? <BeatLoader/> : <p>Submit</p>
             }</button>
         </motion.form>
       </div>
